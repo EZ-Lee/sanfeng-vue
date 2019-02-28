@@ -1,60 +1,73 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div id="top_page">
+		<div class="top_left_page">
+			<img src="./assets/logo.png" />
+		</div>
+		
+		<div class="top_right_page">
+			<b-nav fill> 
+				<b-nav-item  active>关于三丰</b-nav-item> 
+				<b-nav-item>形象宣传</b-nav-item> 
+				<b-nav-item>产品广告</b-nav-item> 
+				<b-nav-item>展厅活动</b-nav-item> 
+				<b-nav-item>地产影片</b-nav-item>
+				<b-nav-item>联系我们</b-nav-item>
+			</b-nav> 
+		</div>
+		<div>
+			<b-carousel id="carousel-fade" style="text-shadow: 0px 0px 2px #000" fade indicators interval='2000' img-width="1024" img-height="480">
+				<b-carousel-slide caption="First slide" img-src="https://picsum.photos/1024/480/?image=10" />
+				<b-carousel-slide caption="Second Slide" img-src="https://picsum.photos/1024/480/?image=12" />
+				<b-carousel-slide caption="Third Slide" img-src="https://picsum.photos/1024/480/?image=22" />
+			</b-carousel>
+		</div>
   </div>
+	
 </template>
 
 <script>
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  name: 'top_page'
 }
+// new Vue({
+// 	el:'#lunbo',
+// 	data:{
+// 		ites:{
+// 			[index:0,src:'https://picsum.photos/300/150/?image=41'],
+// 			[index:1,src:'https://picsum.photos/300/150/?image=41'],
+// 			[index:2,src:'https://picsum.photos/300/150/?image=41']
+// 			}
+// 			
+// 	}
+// })
+
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#id{
+	width: 100%;
+	height: 100px;
+}
+.top_left_page{
+	width: 20%;
+	height: 100px;
+	float: left;
+	text-align: right;
+}
+.top_left_page img {
+	height: 100px;
+}
+.top_right_page{
+	width: 80%;
+	height: 100px;
+	float: left;
+	text-align: center;
+	line-height: 100px;
+	/* height: 50px; */
+	font-size: 20px;
+	font-weight: normal;
+	/* color: rgb(196,0,0); */
+	font-family: '微软雅黑';
 }
 
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>
