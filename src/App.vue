@@ -1,5 +1,6 @@
 <template>
   <div id="top_page">
+	 <router-view></router-view>
 		<div class="top_left_page">
 			<img src="./assets/logo.png" />
 		</div>
